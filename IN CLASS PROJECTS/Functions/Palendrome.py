@@ -9,4 +9,4 @@ def isitPalendrome(string):
          left_pos = left_pos + 1
          right_pos = right_pos - 1     
     return True
-print(isitPalendrome("food"))              
+print(isitPalendrome("food"))
