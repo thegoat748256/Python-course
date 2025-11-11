@@ -13,6 +13,7 @@ def DIVIDE(num6, num7):
 number = int(input("Enter a number "))
 
 number2 = int(input("Enter another number "))
+
 print("The sum is" ,(ADD(number,number2)))
 
 print("The product is" ,(MULTIPLY(number,number2)))
