@@ -6,5 +6,5 @@ def no_notes(a):
         x = a//q
         print("Number of",q,"is",x,".")
         a = a%q
-amount = int(input("Please enter number of currency"))
+amount = int(input("Please enter number of currency "))
 no_notes(amount)
