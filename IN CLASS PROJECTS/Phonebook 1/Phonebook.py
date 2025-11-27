@@ -64,15 +64,18 @@ while ch in (1,2,3,4,5):
               print("There is no contact with this username, kindly please try again")
 
     elif ch == 5:
-         delete_all(pb)
+         display_all(pb)
 
     else:
          thanks()
 
 def menu():
+     print("_____________________________________________________________")
      print("You can now perform all of these actions:")
      print("1. Add a new contact.")
      print("2. Remove an existing contact.")
      print("3. delete all the contacts.")
      print("4. search for an existing contact.")
-     print("5. thanks")
+     print("5. display all contacts")
+     print("6. exit/close the phonebook")
+     print("_____________________________________________________________")
