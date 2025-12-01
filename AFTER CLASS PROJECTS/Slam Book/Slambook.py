@@ -53,7 +53,7 @@ def options():
 
 def Add_friend(sb):
     Dip = []
-    for i in range (len(sb)):
+    for i in range (len(sb[0])):
         if i == 0:
             Dip.append (str(input("Enter friend's name. ")))
 
@@ -67,7 +67,7 @@ def Add_friend(sb):
             Dip.append (str(input("Enter friend's message about you. ")))
 
         if i == 4:
-            Dip.append (int(input("Enter friend's date of birth (DOB) dd/mm/yyyy. ")))
+            Dip.append (str(input("Enter friend's date of birth (DOB) dd/mm/yyyy. ")))
     sb.append(Dip)
     return sb
 
@@ -85,8 +85,83 @@ def delete_friend(sb):
             return sb
 
 def delete_all(sb):
-    print("All friends are deleted. ")
-    return sb.clear()
+    confirm =  str(input("Do you want to delete all friends? You cannot retrieve your friends back. Type N or Y. "))
+    if confirm in("Y","y"):
+        print("All friends are deleted. ")
+        return sb.clear()
+    elif confirm in("N","n"):
+          print("No friends deleted. ")
+          return sb
+    else:
+          print("This is not valid. Try again. ")
+    
+
+def search_existing(sb):
+     temp = []
+     check = -1
+     choice = int(input("Enter search criteria 1. Name. 2. Number 3. Nickname 4. Message 5. DOB. Please enter: "))
+
+     if choice == 1:
+          query = str(input("Enter friend's name. "))
+          for i in range(len(sb)):
+               if query == sb[i][0]:
+                    check = 1
+                    temp.append(sb[i])
+
+     elif choice == 2:
+          query = int(input("Enter friend's number. "))
+          for i in range(len(sb)):
+               if query == sb[i][1]:
+                    check = 1
+                    temp.append(sb[i])
+
+     elif choice == 3:
+          query = str(input("Enter friend's nickname. "))
+          for i in range(len(sb)):
+               if query == sb[i][2]:
+                    check = 1
+                    temp.append(sb[i])
+    
+     elif choice == 4:
+          query = str(input("Enter friend's message about you. "))
+          for i in range(len(sb)):
+               if query == sb[i][4]:
+                    check = 1
+                    temp.append(sb[i])
+    
+     elif choice == 5:
+          query = str(input("Enter friend's date of birth (DOB) dd/mm/yyyy. "))
+          for i in range(len(sb)):
+               if query == sb[i][3]:
+                    check = 1
+                    temp.append(sb[i])    
+
+     else:
+          print("Invalid search criteria. Try again. ")
+          return -1
+
+     if check == -1:
+          return -1
+
+     else:
+          display_all(temp)
+          return check
+
+
+def display_all(sb): 
+	if not sb: 
+		print("List is empty: []") 
+	else: 
+		for i in range(len(sb)): 
+			print(sb[i])
+
+
+def thanks():
+     print("___________________________________________________________________")
+     print("Thank you for trying out this slambook system. ")
+     print("Please visit again! ")
+     print("___________________________________________________________________")
+     sys.exit("Have a great day ahead!")
 
 
 #main function
@@ -99,9 +174,9 @@ print("**********************************************************")
 
 #Choices (1,2,3,4,5)
 ch = 1
-sb = initial_slambook()
+sb = isb()
 while ch in (1,2,3,4,5):
-    ch = menu()
+    ch = options()
     if ch == 1:
          sb = Add_friend(sb)
 
@@ -120,4 +195,4 @@ while ch in (1,2,3,4,5):
          display_all(sb)
 
     else:
-         thanks(sb)
+         thanks()

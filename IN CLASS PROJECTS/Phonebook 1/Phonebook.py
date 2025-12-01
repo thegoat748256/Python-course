@@ -1,7 +1,7 @@
 # Module importing
 import sys
 def initial_phonebook():
-     no_Contacts = int(input("Please enter the amount of contacts."))
+     no_Contacts = int(input("Please enter the amount of contacts. "))
      no_Details = 5
 
      phone_book = []
@@ -12,25 +12,25 @@ def initial_phonebook():
                if j == 0:
                     temp.append(str(input("Please enter contact name. ")))
                     if temp [j] == " ":
-                         sys.exit("Name is a mandatory field. Please try again.")
+                         sys.exit("Name is a mandatory field. Please try again. ")
 
                if j == 1:
-                    temp.append(int(input("Please enter contact number.")))
+                    temp.append(int(input("Please enter contact number. ")))
                     if temp [j] == " ":
-                         sys.exit("Contact number is a mandatory field. Please try again.")
+                         sys.exit("Contact number is a mandatory field. Please try again. ")
 
                if j == 2:
-                    temp.append(str(input("Please enter email id.")))
+                    temp.append(str(input("Please enter email id. ")))
                     if temp [j] == " ":
                          temp [j] = None
 
                if j == 3:
-                    temp.append(str(input("Please enter date of birth (DOB).")))
+                    temp.append(str(input("Please enter date of birth (DOB)." )))
                     if temp [j] == " ":
                          temp [j] = None
 
                if j == 4:
-                    temp.append(str(input("Please enter category.")))
+                    temp.append(str(input("Please enter category (family/friends/work/other/etc...). ")))
                     if temp [j] == " ":
                          temp [j] = None
 
@@ -73,6 +73,7 @@ def add_contact(pb):
                dip.append (str(input("Enter category (family/friends/work/other). ")))                    
 
      pb.append(dip)
+     print("This contact has been added to your phonebook")
      return pb
 
 def remove_existing(pb):
