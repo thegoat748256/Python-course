@@ -12,5 +12,3 @@ File_writing.close()
 File_appending = open("File handling.txt","a")
 File_appending.write("I have lots of friends here in Chennai.")
 File_appending.close()
-
-# READING
