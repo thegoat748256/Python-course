@@ -174,8 +174,8 @@ def thanks():
 #main part
  #Welcome msg
 print("____________________________________________________________________________")
-print("Welcome to the phonebook.")
-print("You may kindly proceed through our features.")
+print("Welcome to this smartphone directory system(SDS).")
+print("You can now proceed to explore this directory.")
 print("____________________________________________________________________________")
 
 #Choices
