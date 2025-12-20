@@ -68,7 +68,21 @@ class Start_RPS():
     def PC_role(self):
         self.PC_Random_Choice = " "
         Option = ["Rock", "Paper", "Scissor"]
-        Option = random.choice(list(Option))
+        PC_Option = random.choice(list(Option))
 
-        if self.PC_Random_Choice == "Rock":
+        if PC_Option == "Rock":
             self.PC_Random_Choice = "Rock"
+            PC_Option = self.Rock
+
+        elif PC_Option == "Paper":
+            self.PC_Random_Choice = "Paper"
+            PC_Option = self.Paper
+
+        elif PC_Option == "Scissor":
+            self.PC_Random_Choice = "Scissor"
+            PC_Option = self.Paper
+
+        PC = self.screen.blit(PC_Option,(600,200))
+        return PC
+    
+    
