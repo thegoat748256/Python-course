@@ -34,9 +34,9 @@ class Start_RPS():
         self.S_btn = pygame.image.load("C:\Users\divya\OneDrive\Desktop\Python course\IN CLASS PROJECTS\Capstone project(2)\scissor btn.webp").convert_alpha()
 
         self.screen.blit(self.bg,(0,0))
-        self.screen.blit(self.bg,(50,500))
-        self.screen.blit(self.bg,(350,500))
-        self.screen.blit(self.bg,(650,500))
+        self.screen.blit(self.R_btn,(50,500))
+        self.screen.blit(self.P_btn,(350,500))
+        self.screen.blit(self.S_btn,(650,500))
 
         self.Rock_btn = Button(50,500, (50,500), (300,700))
         self.Paper_btn = Button(350,500, (350,500), (300,700))
